@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>Profil de {{ client.first_name }}</title>
+</head>
+<body>
+	<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+  <h1>Détail du client</h1>
+  <img src="http://{{ request.get_host }}/{{ client.profile_pictures }}">
+  <h3>First Name: {{ client.first_name }}</h3>
+  <h3>Last Name: {{ client.last_name }}</h3>
+  <h3>Email: {{ client.email }}</h3>
+  <h3>Profil Picture: {{ client.photo_picture }}</h3>
+  <h3>Products: {{ client.products }}</h3>
+
+</div>
+</div>
+</div>
+</body>
+</html>
+

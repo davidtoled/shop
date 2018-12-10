@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clients</title>
+</head>
+<body>
+
+  <h1>Liste de Clients</h1>
+
+  {% for client in clients %}
+   <h3>First Name: {{ client.first_name }}</h3>
+  <h3>Last Name: {{ client.last_name }}</h3>
+  <h3>Email: {{ client.email }}</h3>
+  <h3>Products: {{ client.products }}</h3>
+  <a href="{% url 'shop_app:client' client.id %}">Voir le profil</a>
+  <hr>
+  {% endfor %}
+
+
+</body>
+</html>

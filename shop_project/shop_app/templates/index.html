@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page d'accueil</title>
+</head>
+<body>
+
+  <h1>Liste de produits</h1>
+
+  {% for product in products %}
+    <h3>{{ product.name }} - ${{ product.price }}</h3>
+    <p>{{ product.description }}</p>
+    <a href="{% url 'shop_app:product' product.id %}">Cliquez ici</a><br>
+      <a href="{% url 'shop_app:clients' %}">Clients</a>
+
+    <hr>
+  {% endfor %}
+
+
+</body>
+</html>
