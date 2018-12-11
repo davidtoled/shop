@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Maillots</title>
+</head>
+<body>
+
+  <h1>Liste des maillots</h1>
+
+  {% for maillot in maillots %}
+   <h3>Name : {{ maillot.name }}</h3>
+  <h3>Price :{{ maillot.price }}</h3>
+  <h3>Description : {{ maillot.description }}</h3>
+  <a href="{% url 'shop_app:maillot' maillot.id %}">Voir le maillot</a>
+  <hr>
+  {% endfor %}
+
+
+</body>
+</html>
