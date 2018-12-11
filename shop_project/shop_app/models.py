@@ -25,3 +25,15 @@ class Client(models.Model):
 
 	def __repr__(self):
 		return "<Client {}>".format(self.first_name)
+
+
+class Maillot(models.Model):
+	name = models.CharField(max_length=264)
+	price = models.DecimalField(max_digits=5, decimal_places=2)
+	description = models.TextField()
+	
+	def __str__(self):
+		return self.name
+
+	def __repr__(self):
+		return "<Client {}>".format(self.name)
