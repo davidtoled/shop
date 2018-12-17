@@ -4,6 +4,9 @@ from shop_app.forms import CommentForm
 import datetime
 
 
+from shop_app.models import Product, Client, Maillot
+
+
 def index(request):
 	products = Product.objects.all()[:10]
 	return render(request, 'index.html', context={ 'products': products })
@@ -20,6 +23,7 @@ def clients(request):
 def client(request, client_id):
 	client = Client.objects.get(id=client_id)
 	return render(request, 'client.html', context={ 'client': client })
+
 
 
 def comments(request):
@@ -40,3 +44,11 @@ def comment_form(request, product_id):
 
 
 	return render(request, 'comment_form.html', context={ 'comment_form': CommentForm() })
+
+def maillots(request):
+	maillots = Maillot.objects.all()
+	return render(request, 'maillots.html', context={ 'maillots': maillots })
+
+def maillot(request, maillot_id):
+	maillot = Maillot.objects.get(id=maillot_id)
+	return render(request, 'maillot.html', context={ 'maillot': maillot })
