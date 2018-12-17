@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comments</title>
+</head>
+<body>
+
+  <h1>Liste de commentaires</h1>
+
+  {% for comment in comments %}
+   <h3>Username : {{ comment.username }}</h3>
+  <h3>Text : {{ comment.text }}</h3>
+  <h3>Date : {{ comment.date }}</h3>
+  <h3>Products: {{ comment.product }}</h3>
+  <a href="{% url 'shop_app:comment' comment.id %}">Voir le comment</a>
+  <hr>
+  {% endfor %}
+
+
+</body>
+</html>

@@ -25,3 +25,15 @@ class Client(models.Model):
 
 	def __repr__(self):
 		return "<Client {}>".format(self.first_name)
+
+class Comment(models.Model):
+	username = models.CharField(max_length=264)
+	text = models.TextField()
+	date = models.DateField()
+	product = models.ForeignKey(Product , on_delete=models.CASCADE, default=1) 
+	
+	def __str__(self):
+		return self.username
+
+	def __repr__(self):
+		return "<Comment {}>".format(self.username)

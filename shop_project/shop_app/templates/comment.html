@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>Comment de {{ comment.username }}</title>
+</head>
+<body>
+	<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+  <h1>Détail du commentaire</h1>
+  <h3>Username: {{ comment.username }}</h3>
+  <h3>Text : {{ comment.text }}</h3>
+  <h3>Date : {{ comment.date }}</h3>
+  <h3>Product : {{ comment.product }}
+  <h3>Description : {{ comment.product.description }}</h3>  
+
+</div>
+</div>
+</div>
+</body>
+</html>
+
