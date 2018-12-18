@@ -10,3 +10,4 @@ class Contact(models.Model):
 
 	def __repr__(self):
 		return "<Contact {}>".format(self.email)
+

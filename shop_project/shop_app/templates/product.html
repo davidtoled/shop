@@ -18,16 +18,34 @@
   <h3>Description: {{ product.description }}</h3>
   <hr>
 
-  <h1>Comments: </h1>
+  <h1>Comments</h1>
   {% for comment in comments %}
   <h3>{{ comment.username }}</h3>
   <p>{{ comment.text }}</p>
   <hr>
   {% endfor %}
 
+  <h1>Questions :</h1>
+  {% for question in questions %}
+    <h1>=========================</h1>
+    <div style="background: lightgray;">
+      <h3>{{ question.question.username }}</h3>
+      <h3>{{ question.question.title }}</h3>
+      <p>{{ question.question.text }}</p>
+      <br>
+    </div>
+    <h2>Responses :</h2>
+    <ul>
+    {% for response in question.responses %}
+      <li>{{ response.username }}: {{ response.text }}</li>
+    {% endfor %}
+    <a href="{% url 'shop_app:response_form' question.question.id %}">Pour repondre cliquez ici</a>
+    </ul>
+  {% endfor %}
+
+
 </div>
 </div>
 </div>
 </body>
 </html>
-
