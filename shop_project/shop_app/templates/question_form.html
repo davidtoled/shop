@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<title>Question</title>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-md-8">
+		<h1>Poser une question</h1>
+	<form method="POST">
+		{{ question_form.as_p }}
+		{% csrf_token %}
+		<input type="submit" value="Envoyer" class="btn btn-primary">
+	</form>
+
+	</form>
+</div>
+</div>
+</div>
+</body>
+</html>
